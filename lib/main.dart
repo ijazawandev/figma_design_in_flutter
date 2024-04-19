@@ -17,15 +17,14 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
-            child: Padding(padding:
-              EdgeInsets.symmetric(
+            child: Padding(
+              padding: EdgeInsets.symmetric(
                 horizontal: width * 0.028,
                 vertical: height * 0.005,
               ),
               child: Column(
                 children: [
                   Row(
-
                     children: [
                       Container(
                         height: width * .13,
@@ -51,7 +50,7 @@ class MyApp extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      Spacer(),
                       Container(
                         height: height * .060,
                         width: width * .14,
@@ -61,7 +60,7 @@ class MyApp extends StatelessWidget {
                         ),
                         child: Image.asset('assets/discount.png'),
                       ),
-                      const SizedBox(width: 10),
+                      Spacer(),
                       Container(
                         height: height * .060,
                         width: width * .14,
@@ -76,7 +75,7 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 40),
+                  SizedBox(height: height * .05),
                   Stack(
                     clipBehavior: Clip.none,
                     children: [
@@ -89,7 +88,7 @@ class MyApp extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Padding(
-                          padding:  EdgeInsets.symmetric(
+                          padding: EdgeInsets.symmetric(
                             horizontal: width * 0.02,
                             vertical: height * 0.007,
                           ),
@@ -104,7 +103,7 @@ class MyApp extends StatelessWidget {
                                 'Exchange for what you want',
                                 style: TextStyle(color: Colors.white),
                               ),
-                              SizedBox(height: 10),
+                              SizedBox(height: height * .02),
                               Container(
                                 height: height * .045,
                                 width: width * .25,
@@ -128,13 +127,13 @@ class MyApp extends StatelessWidget {
                       ),
                       // Image.asset('assets/discount.png'),
                       Positioned(
-                        bottom: 15,
-                        left: 170,
+                        bottom: height * .035,
+                        left: width * .5,
                         child: Image.asset('assets/rgb_computer.png', scale: 4),
                       ),
                     ],
                   ),
-                  SizedBox(height: 15),
+                  SizedBox(height: height * .02),
                   Row(
                     children: [
                       Text(
@@ -162,7 +161,7 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 5,
+                    height: height * .008,
                   ),
                   Row(
                     children: [
@@ -251,13 +250,11 @@ class MyApp extends StatelessWidget {
                           Text('Trip')
                         ],
                       ),
-                      SizedBox(
-                        width: 15,
-                      ),
+                      Spacer(),
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: height * .03,
                   ),
                   Row(
                     children: [
@@ -267,7 +264,7 @@ class MyApp extends StatelessWidget {
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
-                        width: 20,
+                        width: width * .05,
                       ),
                       Container(
                         height: height * .030,
@@ -280,258 +277,234 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 5,
+                    height: height * .005,
                   ),
                   Row(
                     children: [
-                      Stack(children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(
-                            'assets/lam.jpeg',
-                            width: width * .46,
-                            height: height * .24,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Padding(
-                          padding:    EdgeInsets.symmetric(
-                            horizontal: width * 0.01,
-                            vertical: height * 0.005,
-                          ),
-                          child: Container(
-                            height: height * .23,
-                            width: width * .44,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.transparent,
-                                border:
-                                    Border.all(color: Colors.white, width: 3)),
-                            child: Padding(
-                              padding:  EdgeInsets.symmetric(
-                                horizontal: width * 0.02,
-                                vertical: height * 0.01,
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    'WhiteLam',
-                                    style: TextStyle(fontSize: 20),
-                                  ),
-                                  Text('LeMagazine'),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 130,
-                            top: 10,
-                          ),
-                          child: CircleAvatar(
-                            maxRadius: 10,
+                      Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
                             child: Image.asset(
-                              'assets/lock.png',
-                              scale: 3,
+                              'assets/lam.jpeg',
+                              width: width * .46,
+                              height: height * .24,
+                              fit: BoxFit.fill,
                             ),
                           ),
-                        )
-                      ]),
-                      Spacer(),
-                      Stack(children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(
-                            'assets/lamp 2.jpeg',
-                            width: width * .46,
-                            height: height * .24,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Padding(
-                          padding:    EdgeInsets.symmetric(
-                            horizontal: width * 0.01,
-                            vertical: height * 0.005,
-                          ),
-                          child: Container(
-                            height: height * .23,
-                            width: width * .44,
-                            decoration: BoxDecoration(
+                          Positioned(
+                            left: width * .01,
+                            top: height * .005,
+                            child: Container(
+                              height: height * .23,
+                              width: width * .44,
+                              decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: Colors.transparent,
                                 border:
-                                    Border.all(color: Colors.white, width: 3)),
-                            child: Padding(
-                              padding:   EdgeInsets.symmetric(
-                                horizontal: width * 0.02,
-                                vertical: height * 0.01,
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    'Floor Lamp',
-                                    style: TextStyle(fontSize: 20),
-                                  ),
-                                  Text('ArtMood'),
-                                ],
+                                    Border.all(color: Colors.white, width: 3),
                               ),
                             ),
                           ),
-                        ),
-                      ]),
+                          Positioned(
+                            top: height * .015,
+                            left: width * .37,
+                            child: CircleAvatar(
+                              maxRadius: 10,
+                              child: Image.asset(
+                                'assets/lock.png',
+                                scale: 3,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: height * .17,
+                            left: width * .03,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  'WhiteLam',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                Text('LeMagazine'),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.asset(
+                              'assets/lamp 2.jpeg',
+                              width: width * .46,
+                              height: height * .24,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          Positioned(
+                            left: width * .01,
+                            top: height * .005,
+                            child: Container(
+                              height: height * .23,
+                              width: width * .44,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.transparent,
+                                border:
+                                    Border.all(color: Colors.white, width: 3),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: height * .17,
+                            left: width * .03,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  'Floor lamp',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                Text('ArtMood'),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: height * .01,
                   ),
                   Row(
                     children: [
-                      Stack(children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(
-                            'assets/images (4).jpeg',
-                            width: width * .46,
-                            height: height * .24,
-                            fit: BoxFit.fill,
+                      Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.asset(
+                              'assets/images (4).jpeg',
+                              width: width * .46,
+                              height: height * .24,
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding:   EdgeInsets.symmetric(
-                            horizontal: width * 0.01,
-                            vertical: height * 0.005,
-                          ),
-                          child: Container(
-                            height: height * .23,
-                            width: width * .44,
-                            decoration: BoxDecoration(
+                          Positioned(
+                            left: width * .01,
+                            top: height * .005,
+                            child: Container(
+                              height: height * .23,
+                              width: width * .44,
+                              decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: Colors.transparent,
                                 border:
-                                    Border.all(color: Colors.white, width: 3)),
-                            child: Padding(
-                              padding:   EdgeInsets.symmetric(
-                                horizontal: width * 0.02,
-                                vertical: height * 0.01,
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    'Kismas',
-                                    style: TextStyle(fontSize: 20),
-                                  ),
-                                  Text('Design house  '),
-                                ],
+                                    Border.all(color: Colors.white, width: 3),
                               ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 130.5,
-                            top: 10.5,
-                          ),
-                          child: CircleAvatar(
-                            backgroundColor: Color(0xffd973e6),
-                            maxRadius: 12,
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              const EdgeInsets.only(left: 132.5, top: 12.5),
-                          child: Container(
-                            height: 20,
-                            width: 20,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color(0xffd973e6),
-                                border: Border.all(
-                                    color: Colors.white, width: 1.2)),
-                            child: Image.asset(
-                              'assets/pwr.png',
-                              scale: 3,
+                          Positioned(
+                            top: height * .17,
+                            left: width * .03,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  'Kismas',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                Text('Design house'),
+                              ],
                             ),
                           ),
-                        ),
-                      ]),
+                          Positioned(
+                            left: width * .36,
+                            top: height * .015,
+                            child: CircleAvatar(
+                              backgroundColor: Color(0xffd973e6),
+                              minRadius: 1,
+                              maxRadius: 12,
+                              child: Container(
+                                height: height * .026,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.transparent,
+                                    border: Border.all(color: Colors.white)),
+                                child: Image.asset(
+                                  'assets/pwr.png',
+                                  scale: 3,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                       Spacer(),
-                      Stack(children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(
-                            'assets/floor.webp',
-                            width: width * .46,
-                            height: height * .24,
-                            fit: BoxFit.fill,
+                      Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.asset(
+                              'assets/floor.webp',
+                              width: width * .46,
+                              height: height * .24,
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding:    EdgeInsets.symmetric(
-                            horizontal: width * 0.01,
-                            vertical: height * 0.005,
-                          ),
-                          child: Container(
-                            height: height * .23,
-                            width: width * .44,
-                            decoration: BoxDecoration(
+                          Positioned(
+                            left: width * .01,
+                            top: height * .005,
+                            child: Container(
+                              height: height * .23,
+                              width: width * .44,
+                              decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: Colors.transparent,
                                 border:
-                                    Border.all(color: Colors.white, width: 3)),
-                            child: Padding(
-                              padding:   EdgeInsets.symmetric(
-                                horizontal: width * 0.02,
-                                vertical: height * 0.01,
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    'WBlacky',
-                                    style: TextStyle(fontSize: 20),
-                                  ),
-                                  Text('ArtMode'),
-                                ],
+                                    Border.all(color: Colors.white, width: 3),
                               ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 130.5,
-                            top: 10.5,
-                          ),
-                          child: CircleAvatar(
-                            backgroundColor: Color(0xffd973e6),
-                            maxRadius: 12,
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              const EdgeInsets.only(left: 132.5, top: 12.5),
-                          child: Container(
-                            height: 20,
-                            width: 20,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color(0xffd973e6),
-                                border: Border.all(
-                                    color: Colors.white, width: 1.2)),
-                            child: Image.asset(
-                              'assets/pwr.png',
-                              scale: 3,
+                          Positioned(
+                            top: height * .17,
+                            left: width * .03,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  'WBlacky',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                Text('ArtMode'),
+                              ],
                             ),
                           ),
-                        ),
-                      ]),
+                          Positioned(
+                            left: width * .36,
+                            top: height * .015,
+                            child: CircleAvatar(
+                              backgroundColor: Color(0xffd973e6),
+                              minRadius: 1,
+                              maxRadius: 12,
+                              child: Container(
+                                height: height * .026,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.transparent,
+                                    border: Border.all(color: Colors.white)),
+                                child: Image.asset(
+                                  'assets/pwr.png',
+                                  scale: 3,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ],
